@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PronounSing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+     
+      .highlight {
+        background-color: yellow;
+      }
+
+      .header-bold {
+        display: inline-block; 
+        color: rgb(255, 38, 0); 
+        font-size: 15px;
+        font-style: italic;
+      }
+
+      .header-pfont {
+        display: inline-block; 
+        color: blue; 
+        font-size: 32px;
+        font-style: italic;
+      }
+
+      #replaceBtn {
+        background-color: red; 
+        color: white
+      }
+
+
+
+      a {
+  text-decoration: none;
+  color: inherit;
+  background-color: rgb(244, 235, 235);
+}
+
+
+
+
+      @media only screen and (max-width: 320px) {
+        body {
+          font-size: 14px;
+          display: inline-block;
+          flex-direction: column;
+          max-width: 95%;
+        
+        }
+
+        textarea,
+        div,
+        pre {
+          width: 100%;
+          box-sizing: border-box;
+          max-width: 95%;
+         
+        }
+
+        output-div {
+          width: 50%;
+          max-width: 50%;
+        }
+
+        .resultDiv {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+     <div class ="copperfield"> 
+      <h3>Stop Straining!</h3>
+      <h4>
+       Use Vowel Modification to Lower your Larnyx and Darken your tone instantly <br> by 
+        <span class="header-pfont">pronounSing!</span> properly 
+<br>
+        </h2>
+        
+      </h4>
+
+      <h3>trick your vocal tract, get into Mix Voice, & start pronounSing instantly...<br>
+    Insert the
+      <span class="header-bold">Challenging Original Line of Lyrics</span>  
+
+      <br />
+
+
+
+</head>
+<body>
+  
+  
+  <label for="input">↓</label>
+   
+  <br> 
+   <textarea id="input" rows="10" cols="50" oninput="modify()"></textarea>
+  
+   
+
+  
+  <br>
+  <label for="output">sing the following in a <i>falsetto (released)</i> configuration</label>
+  <p id="output"></p>
+  <script>
+    function modify() {
+      const input = document.getElementById("input");
+      const output = document.getElementById("output");
+      if (!input) {
+        console.error("Cannot find input element");
+        return;
+      }
+      const inputText = input.value;
+      const wordsToReplace = {
+              "raise": "ruz",
+              "let's" : "hnLudz",
+           "it" : "owed", "little" : "lowedL", "small" : "zMooL",  
+              "lets": "hnLudz",
+              "let's": "hnLudz",
+              "Lets": "hnLudz",
+                "bar": "voar",
+                "and": "owned",
+                "our": "oOoR",
+                "cups": "gopes",
+                "care": "goor",
+                "i": "hnOy",
+                "we": "hwoah",
+                "may": "moe",
+                "lighten": "loyDoon",
+                "up": "hooB",
+                "you": "hnYo",
+                "such": "zoeG",
+                "yea": "yoAy", "went" : "woahnd", 
+        "yeah": "yoAy",
+                "she": "zshow",  "he": "hoe",  "feet": "voad", 
+         "shes": "zshowz", "feel" : "vooL", "just" : "joezd", "things" : "thoweNgz", "thing" : "thoweNg", "something" : "zomethoweNg", "somethings" : "zomethoweNgz", "if" : "ove", 
+        
+                "gotta": "goadUh",
+                "got": "goad",
+           "Somebody's" : "zomeBowedOwez" ,
+"Somebody" : "zomeBowedOwe",
+              "Somebodys" : "zomeBowedOwez",
+              "somebodys" : "zomeBowedOwez",
+"Some" : "zome",
+"Only" : "onLowe", 
+"Light" : "Lloyd" ,
+"Gonna"  : "goanuh",  
+"Shine"  : " zshoyN" , "long" : "loang", "belong" : "bowloang",  
+"Lovely"  : " LonVLow",  
+"Place"  : " Bluzz" ,
+"Face"  : " vuzz" ,
+"A"  : " ong " ,
+"Cry"  : " groy",  
+"Cried"  : " groyed " ,
+"First"  : " voeZd" ,
+"To"  : " doe " ,
+"The"  : "thow", 
+              "the":"thow", "for" : "voe", "door" : "nDoe", "more" : "moeR", 
+"Stars"  : " zDoorz",  
+"Heal"  : " Oh"  ,
+"Healing"  : "oohLoan"  , "healin" : "oohLoan"  , 
+"healer" : "oohLorn"  , 
+"Have"  : "ove"  ,
+"Pack"  : " bowG", 
+"Back"  : " bowG" , 
+"Was"  : " wonz " ,
+"The"  : " Thon " ,
+"Real"  : " row " ,
+"Six"  : " zoegz" ,
+"still"  : " zdoeLL" ,
+"in"  : " own" ,
+"winter"  : "woandoar" ,
+"winter"  : "woanOarDoym" ,
+"your" : "yoRe", 
+"get"  : " goad" ,
+"String"  : " Zdroog ", 
+"Five"  : " voeV " ,
+"Dime"  : " doyM " ,
+"World"  : " hWooD",  
+"Photograph" : " voadOhGrove", 
+"On"  : " hoong " ,
+"Wish"  : " hWoozsh"  , "when" : "woan", 
+"People"  : " mmBOhBooL" , "want" : "wohNd", 
+"That"  : " though" ,
+"Lord"  : " hNLood ", 
+"cold"  : " good ",  
+"Blood"  : " blowed ", 
+"Mystery"  : " moozDooRoo" , "has" : "oze", 
+"Mysterious"  : " moozDooRooUz" ,
+"It"  : " oowed"  , "through" : "throw", "where" : "woah", "time" : "doym",  "times" : "doymz", "good" : "goad", "so" : "zoe", "seem" : "zome",  "seems" : "zomez",  "seemed" : "zomed", 
+"Isn’t"  : " ooweznd",  "broken" : "brooGoon", "beach" : "bowG", "teach" : "bowG", "reach" : "rowG", 
+"reachin" : "rowGown", "reaching" : "rowGown", "out" : "owed", 
+         "red" : "Rowed",  "dead" : "doughed",  "head" : "Hoed", "send" : "zoed", "darlin" : "nDoorLoan", "darling" : "nDoorLoan", 
+        "touch" : "dowge",  "touchin" : "dowgeN", "touching" : "dowgeN",  "lovin" : "loavoon", "loving" : "loavoon", 
+        "never" : "noVoh", "weak" : "hWoge", "away" : "ohWoh", "run" : "roan", "give" : "ngove", "lord" : "load", "givin" : "ngoven", "giving" : "ngoven", 
+"Fall"  : " hVooL" ,
+"Way"  : " wooNg",   "dont" : "nDoan", "me" : "moy", "im" : "oym", 
+"Maybe"  : " mMooBoh",  "baby"  : " mMBooBoh", "day" : "nDoo", 
+        "daylight" : "nDooLlyod",
+"Hand"  : "hooNd" , "and"  : "ooNd" , "Land"  : "LooNd" , "lose" : "loze", "tonight" : "dohnoyd", "tonite" : "dohnoyd", 
+        "my" : "moy", "night" : "noyd", "somewhere" : "zomeWoo", "girl" : "gooRL", "body" : "bowedOwe", 
+"understand" : "ownDohZdooNd" , "bad" : "bowed", "know" : "noo",  "no" : "noo", "noone" : "noowoan","knows" : "nooz","high" : "hoy", "highway" : "hoyWoong", "dark" : "nDork", "heart": "horde", "can't" : "goand", "can" : "goan", "tried" : "droad", "no one" : "noo woan","try" : "drone", "desert" : "dozode", "love" : "loave", "crazy" : "growzoe", "were" : "woor", "think" : "thoughng", "i'm" : "ooym", "her" : "hoore", "before" : "booVoe", "life" : "Loyv", "all" : "hooL", "dream" : "nDroom", "scream" : "zGroom", 
+                "be": "bow"
+             };
+      let modifiedInput = inputText.toLowerCase().replace(/['’]/g, "");
+      for (const word in wordsToReplace) {
+        const pattern = new RegExp(`\\b${word}\\b`, "gi");
+        modifiedInput = modifiedInput.replace(pattern, wordsToReplace[word]);
+      }
+      output.textContent = modifiedInput;
+    }
+  </script>
+</body>
+
+
+</html>
+
+<!--
